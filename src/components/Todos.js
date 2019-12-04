@@ -1,12 +1,13 @@
-import React from 'react';
-import './App.css';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>App</h1>
-    </div>
-  );
+class Todos extends Component {
+
+  render() {
+    return this.props.todos.map((todo) => (
+      <h3>{todo.title}</h3>
+    ));
+  }
 }
 
-export default App;
+
+export default Todos;
